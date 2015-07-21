@@ -1,0 +1,61 @@
+did_you_do_it_get_all_tasklist:
+    path:     /tasklist
+    defaults: { _controller: DidYouDoItBundle:TaskList:getAll }
+    requirements:
+        _method: GET
+did_you_do_it_get_one_tasklist:
+    path:     /tasklist/{id}
+    defaults: { _controller: DidYouDoItBundle:TaskList:getOne }
+    requirements:
+        _method: GET
+did_you_do_it_new_tasklist:
+    path:     /tasklist/new/
+    defaults: { _controller: DidYouDoItBundle:TaskList:new }
+    requirements:
+        _method: GET
+did_you_do_it_create_tasklist:
+    path:     /tasklist
+    defaults: { _controller: DidYouDoItBundle:TaskList:create }
+    requirements:
+        _method: POST
+did_you_do_it_delete_tasklist:
+    path:     /tasklist/{id}
+    defaults: { _controller: DidYouDoItBundle:TaskList:delete }
+    requirements:
+        _method: DELETE
+did_you_do_it_edit_tasklist:
+    path:     /tasklist/{id}/edit/
+    defaults: { _controller: DidYouDoItBundle:TaskList:edit }
+    requirements:
+        _method: GET
+did_you_do_it_modify_tasklist:
+    path:     /tasklist/{id}
+    defaults: { _controller: DidYouDoItBundle:TaskList:modify }
+    requirements:
+        _method: PUT
+did_you_do_it_new_task:
+    path:     /tasklist/{idTaskList}/task/new/
+    defaults: { _controller: DidYouDoItBundle:Task:new }
+    requirements:
+        _method: GET
+did_you_do_it_create_task:
+    path:     /tasklist/{idTaskList}/task
+    defaults: { _controller: DidYouDoItBundle:Task:create }
+    requirements:
+        _method: POST
+did_you_do_it_edit_task_from_tasklist:
+    path:     /tasklist/{idTaskList}/task/{idTask}/edit/
+    defaults: { _controller: DidYouDoItBundle:Task:edit }
+    requirements:
+        _method: GET
+did_you_do_it_modify_task_from_tasklist:
+    path:     /tasklist/{idTaskList}/task/{idTask}
+    defaults: { _controller: DidYouDoItBundle:Task:modify }
+    requirements:
+        _method: PUT
+connection_oauth:
+    path:     /oauthconnection
+    defaults: { _controller: DidYouDoItBundle:OAuth:connection }
+oauth2_callback:
+    path:     /oauth2callback
+    defaults: { _controller: DidYouDoItBundle:OAuth:oauth2callback }
